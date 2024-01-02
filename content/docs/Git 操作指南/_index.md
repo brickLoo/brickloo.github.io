@@ -11,7 +11,7 @@ next: '/docs/Git 操作指南/优雅地删除历史 commit 记录'
 接下来：
 
 {{< cards >}}
-  {{< card link="/docs/Git-操作指南/优雅地删除历史-commit-记录/" title="优雅地删除历史 commit 记录" >}}
+  {{< card link="/docs/git-操作指南/优雅地删除历史-commit-记录/" title="优雅地删除历史 commit 记录" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
