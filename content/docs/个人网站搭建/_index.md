@@ -2,7 +2,7 @@
 date: '2024-01-02'
 title: '个人网站搭建'
 prev: '/docs/'
-url: 'docs/build-your-site/'
+url: '/docs/build-your-site/'
 next: '/docs/个人网站搭建/一、主题配置和部署'
 ---
 
