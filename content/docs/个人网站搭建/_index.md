@@ -1,5 +1,6 @@
 ---
 date: '2024-01-02'
+slug: 'build-your-site'
 title: '个人网站搭建'
 prev: '/docs/'
 next: '/docs/个人网站搭建/一、主题配置和部署'
