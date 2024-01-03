@@ -1,8 +1,8 @@
 ---
 date: '2024-01-02'
 title: '个人网站搭建'
-prev: '/docs/'
-url: '/docs/build-your-site/'
+prev: '/docs'
+url: '/docs/build-your-site'
 next: '/docs/个人网站搭建/一、主题配置和部署'
 ---
 
@@ -15,7 +15,7 @@ next: '/docs/个人网站搭建/一、主题配置和部署'
 接下来：
 
 {{< cards >}}
-  {{< card link="/docs/build-your-site/build-your-site-1/" title="一、主题配置和部署" >}}
+  {{< card link="/docs/build-your-site/1/" title="一、主题配置和部署" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

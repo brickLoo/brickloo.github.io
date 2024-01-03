@@ -1,7 +1,8 @@
 ---
 date: '2024-01-03'
 title: '优雅地删除历史 commit 记录'
-prev: '/docs/git/'
+prev: '/docs/Git 操作指南'
+url: '/docs/git/delete-commit-history'
 ---
 
 ## 需求

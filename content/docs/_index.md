@@ -1,6 +1,6 @@
 ---
 title: '文档库'
-next: '/docs/build-your-site/'
+next: '/docs/个人网站搭建'
 ---
 
 欢迎，这里是砖的文档库。  
@@ -13,6 +13,7 @@ next: '/docs/build-your-site/'
 
 {{< cards >}}
   {{< card link="/docs/build-your-site/" title="个人网站搭建" subtitle="这个网站的建站笔记文档" >}}
+  {{< card link="/docs/git/" title="Git 操作指南" subtitle="关于 Git 使用的个人笔记文档" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
