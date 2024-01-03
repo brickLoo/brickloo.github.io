@@ -1,7 +1,7 @@
 ---
 date: '2024-01-02'
 title: '一、主题配置和部署'
-prev: '/docs/个人网站搭建/'
+prev: '/docs/build-your-site/'
 ---
 
 作者：BrickLoo  

@@ -1,6 +1,6 @@
 ---
 title: '文档库'
-next: '/docs/个人网站搭建/'
+next: '/docs/build-your-site/'
 ---
 
 欢迎，这里是砖的文档库。  
@@ -12,7 +12,7 @@ next: '/docs/个人网站搭建/'
 接下来你可以探索：
 
 {{< cards >}}
-  {{< card link="/docs/个人网站搭建/" title="个人网站搭建" subtitle="这个网站的建站笔记文档" >}}
+  {{< card link="/docs/build-your-site/" title="个人网站搭建" subtitle="这个网站的建站笔记文档" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
