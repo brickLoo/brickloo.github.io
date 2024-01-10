@@ -3,6 +3,7 @@ baseURL: https://brickloo.github.io/
 languageCode: zh-cn
 timeZone: Asia/Shanghai
 title: Brick's Docs.
+enableEmoji: true
 
 # import hextra as module
 module:
