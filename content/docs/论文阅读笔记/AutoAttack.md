@@ -2,7 +2,7 @@
 date: '2024-01-16'
 title: 'AutoAttack'
 math: true
-prev: '/docs'
+prev: '/docs/论文阅读笔记'
 url: '/docs/papers-note/AutoAttack'
 ---
 
