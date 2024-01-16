@@ -2,7 +2,7 @@
 date: '2024-01-16'
 title: '论文阅读笔记'
 prev: '/docs'
-url: '/docs/papers-note'
+url: '/docs/papers-notes'
 next: '/docs/论文阅读笔记/AutoAttack'
 ---
 
