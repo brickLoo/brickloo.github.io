@@ -1,6 +1,7 @@
 ---
 date: '2024-01-03'
 title: 'Git 操作指南'
+weight: 2
 prev: '/docs'
 url: '/docs/git'
 next: '/docs/Git 操作指南/优雅地删除历史 commit 记录'

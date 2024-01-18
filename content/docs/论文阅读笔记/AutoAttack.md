@@ -97,7 +97,7 @@ $$CE(x,y)=-\mathop{log}p_y=-z_y+\mathop{log}(\sum\limits_{j=1}^K e^{z_j})$$
 CE 损失只具有平移不变性，但是不具有缩放不变性。`// 不太确定平移不变性的部分，但是作者认为缩放不变性是罪魁祸首`
 
 继续对 CE 求导，我们可以得到
-$$\nabla_x CE(x,y)=(-1+p_y)\nabla_x z_y + \sum\limits_{i \neq y}p_i \nabla_x z_i$$
+$$\nabla_x CE(x,y)=-\nabla_x z_y+\frac{\sum_{i=1}^K e^{z_i} \nabla_x z_i}{\sum_{j=1}^K e^{z_j}}=(-1+p_y)\nabla_x z_y + \sum\limits_{i \neq y}p_i \nabla_x z_i$$
 在正确预测时，概率最大的类别为正确的类别 $y$。如果预测得分 $z_y$ 与其他类别 $x_i$ 差得很多，那么计算出来的 $p_y$ 则可能趋近于 $1$，其他类别 $p_i$ 趋近于 $0$，使得整个 CE 损失的导数趋近于 $0$，甚至在计算机的精度下等于 $0$，导致其无法被 PGD 用以迭代改进。这种现象在 C&W 攻击方法的论文中被发现。
 
 而在白盒攻击中，攻击者可以对 logits 值进行缩放，避免梯度消失的问题，进而能够通过 PGD 生成有效的对抗样本。如果评估鲁棒性时未考虑这一因素，则会导致模型性能的高估。
