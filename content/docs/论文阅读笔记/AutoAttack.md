@@ -8,16 +8,17 @@ url: '/docs/papers-notes/AutoAttack'
 
 > 笔记作者：BrickLoo
 >   
-> Francesco Croce and Matthias Hein. 2020. Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks. In Proceedings of the 37th International Conference on Machine Learning (ICML'20), Vol. 119. JMLR.org, Article 206, 2206–2216.  
-> https://arxiv.org/abs/2003.01690  
-> **Published in:** [ICML'20: Proceedings of the 37th International Conference on Machine Learning](https://dl.acm.org/doi/proceedings/10.5555/3524938)  
-> **Official Code:** https://github.com/fra31/auto-attack
+> **Reliable Evaluation of Adversarial Robustness with an Ensemble of Diverse Parameter-free Attacks**  
+> Francesco Croce, Matthias Hein  
+> _Proceedings of the 37th International Conference on Machine Learning_, PMLR 119:2206-2216, 2020.  
+
+[Publisher](https://proceedings.mlr.press/v119/croce20b.html) &nbsp; [GitHub](https://github.com/fra31/auto-attack) &nbsp; [arXiv](https://arxiv.org/abs/2003.01690) &nbsp; [Semantic Scholar](https://www.semanticscholar.org/paper/Reliable-evaluation-of-adversarial-robustness-with-Croce-Hein/18939eadc9c4460c8385e0591cde214a1ead067b)
 
 ## 简介
 
 ### 意义
 
-为模型鲁棒性提供更规范化的评估方式。`// 另一方面来说是改进了 PGD 攻击`
+为模型鲁棒性提供更规范化的评估方式。`// 另一方面来说改进了 PGD 攻击，攻击性更强`
 
 ### 背景
 
@@ -30,6 +31,11 @@ url: '/docs/papers-notes/AutoAttack'
 ### 改进思路
 
 提出两种 PGD 变体来分别解决问题（其中“迭代次数”是唯一的超参数），并结合两个同期工作中提出的攻击方法（白盒 FAB 攻击和黑盒 Square 攻击），综合评估模型鲁棒性。
+
+文章的创新点在于，
+- 提出了无需调参的 APGD 方法，整个算法流程的设计有很多亮点；
+- 提出 DLR 损失来提高攻击稳定性；
+- 结合多种攻击方法进行评估，保守估计模型鲁棒性；
 
 ### 实验思路
 
@@ -64,7 +70,7 @@ url: '/docs/papers-notes/AutoAttack'
 
 ![APGD 算法伪代码](/APGD.png)
 解读：
-- 3 行：随机初始化
+- 3 行：初始化
 - 4 - 5 行：比较并保存最优对抗样本
 - 6 - 17 行：迭代搜索更优的对抗样本
 	- 7 - 8 行：应用动量机制生成新的对抗样本
