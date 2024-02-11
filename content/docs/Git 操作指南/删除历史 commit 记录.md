@@ -1,9 +1,11 @@
 ---
 date: '2024-01-03'
-title: '优雅地删除历史 commit 记录'
-prev: '/docs/Git 操作指南'
+title: '删除历史 commit 记录'
+prev: '/docs/Git 操作指南/用 SSH 连接 GitHub'
 url: '/docs/git/delete-commit-history'
 ---
+
+笔记作者：BrickLoo  
 
 ## 需求
 

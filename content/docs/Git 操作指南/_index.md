@@ -4,7 +4,7 @@ title: 'Git 操作指南'
 weight: 2
 prev: '/docs'
 url: '/docs/git'
-next: '/docs/Git 操作指南/优雅地删除历史 commit 记录'
+next: '/docs/Git 操作指南/用 SSH 连接 GitHub'
 ---
 
 这里是砖的 Git 相关笔记。  
@@ -13,7 +13,8 @@ next: '/docs/Git 操作指南/优雅地删除历史 commit 记录'
 接下来：
 
 {{< cards >}}
-  {{< card link="/docs/git/delete-commit-history/" title="优雅地删除历史 commit 记录" >}}
+  {{< card link="/docs/git/ssh-and-github/" title="用 SSH 连接 GitHub" >}}
+  {{< card link="/docs/git/delete-commit-history/" title="删除历史 commit 记录" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
