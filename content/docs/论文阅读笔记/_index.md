@@ -1,7 +1,7 @@
 ---
 date: '2024-01-16'
 title: '论文阅读笔记'
-weight: 3
+weight: 4
 prev: '/docs'
 url: '/docs/papers-notes'
 next: '/docs/论文阅读笔记/AutoAttack'
@@ -14,6 +14,7 @@ next: '/docs/论文阅读笔记/AutoAttack'
 
 {{< cards >}}
   {{< card link="/docs/papers-note/AutoAttack/" title="AutoAttack" >}}
+  {{< card link="/docs/papers-note/DiffPure/" title="DiffPure" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

@@ -17,6 +17,7 @@ next: '/docs/个人网站搭建/一、主题配置和部署'
 
 {{< cards >}}
   {{< card link="/docs/build-your-site/1/" title="一、主题配置和部署" >}}
+  {{< card link="/docs/build-your-site/2/" title="二、网站内容管理" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

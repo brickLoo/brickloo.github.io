@@ -1,16 +1,18 @@
 ---
 date: '2024-01-16'
 title: 'AutoAttack'
+weight: 1
 math: true
 prev: '/docs/论文阅读笔记'
 url: '/docs/papers-notes/AutoAttack'
+next: '/docs/论文阅读笔记/DiffPure'
 ---
 
 > 笔记作者：BrickLoo
 >   
 > **Reliable Evaluation of Adversarial Robustness with an Ensemble of Diverse Parameter-free Attacks**  
 > Francesco Croce, Matthias Hein  
-> _Proceedings of the 37th International Conference on Machine Learning_, PMLR 119:2206-2216, 2020.  
+> *Proceedings of the 37th International Conference on Machine Learning*, PMLR 119:2206-2216, 2020.  
 
 [Publisher](https://proceedings.mlr.press/v119/croce20b.html) &nbsp; [GitHub](https://github.com/fra31/auto-attack) &nbsp; [arXiv](https://arxiv.org/abs/2003.01690) &nbsp; [Semantic Scholar](https://www.semanticscholar.org/paper/Reliable-evaluation-of-adversarial-robustness-with-Croce-Hein/18939eadc9c4460c8385e0591cde214a1ead067b)
 
