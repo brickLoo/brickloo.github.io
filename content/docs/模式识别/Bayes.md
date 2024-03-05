@@ -77,7 +77,7 @@ $$R\left(\alpha_i|x\right)=\sum^c_{j=1}\lambda_{ij}p\left(\omega_j|x\right)$$
 
 性能评估是性能改进的关键步骤，因此我们需要分析这种决策方式的错误率以评估性能。对于 Bayes Rule，决策的错误率为
 
-$$p\left(error|x\right)=1-\mathop{max}\left[p\left(\omega_1|x\right),p\left(\omega_2|x\right),\dots,p\left(\omega_n|x\right)\right]$$
+$$p(error|x)=1-\mathop{max}\big[p(\omega_1|x),p(\omega_2|x),\dots,p(\omega_n|x)\big]$$
 
 因为我们会选使得 $p\left(\omega_i|x\right)$ 最大的那个 $\omega_i$，且这样选择的正确率就是 $p\left(\omega_i|x\right)$，所以错误率就是用 $1$ 减去它。
 
