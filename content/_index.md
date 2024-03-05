@@ -10,17 +10,20 @@ toc: false
 
 路过的朋友们 2024 新年快乐，龙年大吉！ :laughing:
 
-感觉时间一下子就消失了，假期似乎啥也没干但是又干了一堆乱七八糟的事情，像是收获满满但是毫无用处……
-
-开学的自律就从更新网站做起，加油！（希望这次的自律可以持续久一点嘿
-
-<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 02 月 26 日</div>
+<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 03 月 03 日</div>
 
 ---
 
 <div class="p-2"></div>
 
 ## 更新日志
+
+{{% details title="2024-03-05" closed="flase" %}}
+
+- 调整了“模式识别”篇的目录页说明；
+- 更新了“模式识别”篇的两份文档；
+
+{{% /details %}}
 
 {{% details title="2024-02-26" closed="flase" %}}
 
@@ -36,7 +39,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-01-16" closed="flase" %}}
+{{% details title="2024-01-16" closed="true" %}}
 
 - 更新了“论文阅读笔记”篇的目录页和第一份文档；
 

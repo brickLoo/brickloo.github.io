@@ -1,6 +1,6 @@
 ---
 date: '2024-02-26'
-title: '模式识别简介'
+title: 'Intro'
 weight: 1
 prev: '/docs/模式识别'
 url: '/docs/pr/1'
