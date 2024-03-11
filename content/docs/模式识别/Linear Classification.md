@@ -74,8 +74,8 @@ w&=(X^\intercal X)^{-1}X^\intercal c
 经过这样一通操作，我们就只需要对行列数相等的矩阵求逆了。虽然看起来式子更加复杂，但是其实计算起来会更加简单。这种处理方法就叫做伪逆法。
 
 这种方法的缺点在于，$X^\intercal X$ 不一定是非奇异矩阵，有可能无法求逆。一种解决方法是对这部分叠加一个很小的单位矩阵，使其变为
-$$X'=\lim_{\epsilon\rightarrow0}(X^\intercal X+\epsilon I)^{-1}X^\intercal$$
-并使用最后计算出的结果 $w=X'c$ 来近似实际值。
+$$X^\prime=\lim_{\epsilon\rightarrow0}(X^\intercal X+\epsilon I)^{-1}X^\intercal$$
+并使用最后计算出的结果 $w=X^\prime c$ 来近似实际值。
 
 #### 2. Least-Mean-Squares (LMS) Algorithm
 
