@@ -14,7 +14,6 @@ next: '/docs/论文阅读笔记/AutoAttack'
 
 {{< cards >}}
   {{< card link="/docs/papers-note/AutoAttack/" title="AutoAttack" >}}
-  {{< card link="/docs/papers-note/DiffPure/" title="DiffPure" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
