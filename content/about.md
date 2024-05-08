@@ -1,6 +1,7 @@
 ---
 title: 'About'
 type: about
+lastmod: '2024-04-22'
 ---
 
 ## About me
@@ -40,11 +41,12 @@ My current interests include but are not limited to deep learning. I am currentl
 ## About my friends
 
 {{< cards >}}
-  {{< card link="https://congjyu.github.io/" title="Rain Chen's Blog" >}}
   {{< card link="https://blog.rewired.moe/" title="Blog Rewired" >}}
+  {{< card link="https://leikrit.github.io/" title="Jerry LI" >}}
+  {{< card link="https://congjyu.github.io/" title="Rain Chen's Blog" >}}
   {{< card link="https://jupiterkwan.github.io/" title="木球今天要高兴" >}}
   {{< card link="https://cherishqwq.github.io/newsite.github.io/" title="如水随光" >}}
-  {{< card link="https://zhandj.com/" title="詹迪佳 | 博客" >}}
   {{< card link="https://jiangyj.tech/" title="云上江英进" >}}
-  {{< card link="https://blog.qiuzizhao.top/" title="邱梓钊の博客" >}}
+  {{< card link="https://zhandj.com/" title="詹迪佳 | 博客" >}}
+  <!-- {{< card link="https://blog.qiuzizhao.top/" title="邱梓钊の博客" >}} -->
 {{< /cards >}}
