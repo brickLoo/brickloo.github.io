@@ -103,7 +103,7 @@ $$L(w)=-g(x)y$$
 
 先看 $\frac{\partial L}{\partial w_{kj}}$ 的计算方法。对于最后一层，当我们以均方误差 $L=(target-output)^2/2$ 为准则函数时
 $$\frac{\partial L}{\partial w_{kj}}=\frac{\partial L}{\partial output_k}\frac{\partial output_k}{\partial net_k}\frac{\partial net_k}{\partial w_{kj}}$$
-其中，$net_k = \sum^{n}_{t=1}{w_{kt}y_t}$，$output_k=f(net_k)$，分别表示神经网络模型单元中的线性组合和非线性处理部分，因此，
+其中，$net_k = \sum^n_{t=1}{w_{kt}y_t}$，$output_k=f(net_k)$，分别表示神经网络模型单元中的线性组合和非线性处理部分，因此，
 $$\begin{align*}
 \frac{\partial L}{\partial output_k}&=-(target_k-output_k) \newline
 \frac{\partial output_k}{\partial net_k}&=f\prime(net_k) \newline
