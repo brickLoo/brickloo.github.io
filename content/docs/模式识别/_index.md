@@ -20,6 +20,7 @@ next: '/docs/模式识别/Intro'
   {{< card link="/docs/pr/2/" title="1. Bayes" >}}
   {{< card link="/docs/pr/3/" title="2. Normal Distribution" >}}
   {{< card link="/docs/pr/4/" title="3. Linear Classification" >}}
+  {{< card link="/docs/pr/5/" title="4. Neural Networks" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

@@ -1,5 +1,6 @@
 ---
 date: '2024-03-01'
+lastmod: '2024-05-08'
 title: 'Normal Distribution'
 weight: 3
 math: true
@@ -44,9 +45,10 @@ $$g_i(x) = \frac{1}{(2\pi)^{d/2}|\Sigma_i|^{1/2}} \exp \left[-\frac{1}{2}(x-\mu_
 $$g_i(x) = -\frac{d}{2}\ln(2\pi)-\frac{1}{2}\ln(|\Sigma_i|)-\frac{1}{2}(x-\mu_i)^\intercal\Sigma_i^{-1}(x-\mu_i)+\ln\big(p(\omega_i)\big)$$
 对于不同类别 $i$ 之间的比较，由于输入的 $x$ 是固定的，含有维度的项 $-\frac{d}{2}\ln(2\pi)$ 是个常量，因此在判别函数中我们可以将其省略。另外，把含有自然对数的常数项放在一起看起来更优雅一点，我们再调整一下，得到
 $$g_i(x) = -\frac{1}{2}(x-\mu_i)^\intercal\Sigma_i^{-1}(x-\mu_i)-\frac{1}{2}\ln(|\Sigma_i|)+\ln\big(p(\omega_i)\big)$$
-这个公式就是最普适的判别函数。
 
-其实到这里公式已经相对简单，可以直接用了。不过注意到前面的项 $(x-\mu_i)^\intercal\Sigma_i^{-1}(x-\mu_i)$ 类似于差的平方，因此我们还可以继续将 $g_i(x)$ 展开成形如 $a_ix^2+b_ix+c_i$ 的形式。我们先看局部
+到这里公式就已经相对简单，可以直接用了。
+
+不过，注意到前面的项 $(x-\mu_i)^\intercal\Sigma_i^{-1}(x-\mu_i)$ 类似于差的平方，因此我们还可以继续将 $g_i(x)$ 展开成形如 $a_ix^2+b_ix+c_i$ 的形式，然后将其中常数参数的计算分离开来。我们先看局部
 
 $$\begin{align*}
 (x-\mu_i)^\intercal\Sigma_i^{-1}(x-\mu_i)&=(x^\intercal\Sigma_i^{-1}-\mu_i^\intercal\Sigma_i^{-1})(x-\mu_i)\newline
@@ -66,15 +68,17 @@ w_i&=\Sigma_i^{-1}\mu_i\newline
 b_i&=-\frac{1}{2}\mu_i^\intercal\Sigma_i^{-1}\mu_i-\frac{1}{2}\ln(|\Sigma_i|)+\ln\big(p(\omega_i)\big)
 \end{align*}$$
 
-## 分布参数的最大似然估计
+这一通操作下来，我们可以更清晰看到判别函数的二次函数形式。
+
+## 正态分布参数的最大似然估计
 
 由于这个部分的篇幅有点长，所以这里断成小的章节来叙述，但是内容是连续而并非并列的。
 
-### 为何需要正态分布参数
+### 为何需要关注正态分布参数
 
 我们在前面 Bayes 的章节讲到，对于难以“观测”和估计的变量 $\omega$，我们在优先确定其取值 $\omega_i$ 的情况下，可以统计其它方便“观测”的变量 $x$ 的取值比例情况 $p(x|\omega_i)$，并利用这些统计信息通过 Bayes 公式反向解决问题。
 
-然而在许多应用场景中，这个变量 $x$ 的取值比例情况服从正态分布 $N(\mu_i,\Sigma_i)$，也就是说要使用 $p(x|\omega_i)$ 的数学表达式来计算就必须知道它所对应的正态分布参数 $\theta_i=(\mu_i,\Sigma_i)$。
+然而在许多应用场景中，这个变量 $x$ 的取值比例情况服从正态分布 $N(\mu_i,\Sigma_i)$，也就是说要使用 $p(x|\omega_i)$ 的数学表达式来计算$p(\omega_i|x)$ 就必须知道它所对应的正态分布参数 $\theta_i=(\mu_i,\Sigma_i)$。
 
 但是，我们采样得到的对应类别的数据集 $D_i$ 总归是离散的，采样也有可能是不充分的，正态分布的参数也不止一种可能。因此我们需要考虑我们目前拥有的数据集来估计出最有可能的参数 $\theta_i$，也就是找到最大的 $p(\theta_i|D_i)$。
 

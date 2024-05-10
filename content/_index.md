@@ -21,6 +21,13 @@ toc: false
 
 ## 更新日志
 
+{{% details title="2024-05-10" closed="flase" %}}
+
+- “模式识别”篇新增一份文档；
+- “模式识别”篇的“Linear Classification”章节修复变量错误；
+
+{{% /details %}}
+
 {{% details title="2024-03-11" closed="flase" %}}
 
 - “模式识别”篇的“Bayes”章节内容逻辑优化；
@@ -35,7 +42,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-03-05" closed="flase" %}}
+{{% details title="2024-03-05" closed="true" %}}
 
 - “模式识别”篇的目录页说明调整；
 - “模式识别”篇新增两份文档；
