@@ -16,11 +16,12 @@ next: '/docs/模式识别/Intro'
 接下来：
 
 {{< cards >}}
-  {{< card link="/docs/pr/1/" title="0. Intro" >}}
-  {{< card link="/docs/pr/2/" title="1. Bayes" >}}
-  {{< card link="/docs/pr/3/" title="2. Normal Distribution" >}}
-  {{< card link="/docs/pr/4/" title="3. Linear Classification" >}}
-  {{< card link="/docs/pr/5/" title="4. Neural Networks" >}}
+  {{< card link="/docs/pr/0/" title="0. Introduction" >}}
+  {{< card link="/docs/pr/1/" title="1. Bayes Theorem" >}}
+  {{< card link="/docs/pr/2/" title="2. Normal Distribution" >}}
+  {{< card link="/docs/pr/3/" title="3. Linear Classification" >}}
+  {{< card link="/docs/pr/4/" title="4. Neural Networks" >}}
+  {{< card link="/docs/pr/5/" title="5. Practical Techniques" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

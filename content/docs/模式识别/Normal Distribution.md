@@ -4,7 +4,7 @@ lastmod: '2024-05-08'
 title: 'Normal Distribution'
 weight: 3
 math: true
-url: '/docs/pr/3'
+url: '/docs/pr/2'
 ---
 
 笔记作者：BrickLoo

@@ -1,15 +1,15 @@
 ---
 date: '2024-03-01'
-lastmod: '2024-05-08'
-title: 'Bayes'
+lastmod: '2024-05-10'
+title: 'Bayes Theorem'
 weight: 2
 math: true
-url: '/docs/pr/2'
+url: '/docs/pr/1'
 ---
 
 笔记作者：BrickLoo
 
-## Bayes Formula
+## Formula
 
 本质上是描述“考虑多种变量/条件叠加的概率时，考虑条件先后顺序不影响结果”的等式。(只需要移下项)
 
@@ -92,3 +92,5 @@ $$p(error|x)=1-\mathop{max}\big[p(\omega_1|x),p(\omega_2|x),\dots,p(\omega_n|x)\
 
 对于实际问题，在靠近决策边界的区域，我们可能比较难做出最优决策；因此对于实际的 Error，如果做出的决策不是理论最优决策，那么根据公式减去的 $p\left(\omega_i|x\right)$ 就不是最大值 $\mathop{max}\big[p(\omega_1|x),p(\omega_2|x),\dots,p(\omega_n|x)\big]$，而是相对更小的值，因此实际计算出的 Error 会相对更大。数值上多出来的这部分被称为 **Added Error**。即
 $$Error = Bayes\ Error + Added\ Error$$
+
+不过，不好的指标在测试中也不一定能表现出明显的性能差距，但这代表了某种偏见和刻板印象，在特殊的场景下就有出现问题的风险和隐患。例如，是否涂了口红理应只与嘴唇颜色有关，而与人物性别无关；然而受到采样局限性，以及错误选取指标 $x$ 的影响，以性别作为选取指标通常也能表现出比较好的性能，但不适用于所有场景。这种偏见被称为 **Representation Bias**。

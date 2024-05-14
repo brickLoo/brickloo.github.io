@@ -21,6 +21,13 @@ toc: false
 
 ## 更新日志
 
+{{% details title="2024-05-14" closed="flase" %}}
+
+- “模式识别”篇新增一份文档；
+- “模式识别”篇调整了链接中的序号；
+
+{{% /details %}}
+
 {{% details title="2024-05-10" closed="flase" %}}
 
 - “模式识别”篇新增一份文档；
@@ -36,7 +43,7 @@ toc: false
 {{% /details %}}
 
 
-{{% details title="2024-03-11" closed="flase" %}}
+{{% details title="2024-03-11" closed="true" %}}
 
 - “模式识别”篇新增一份文档；
 

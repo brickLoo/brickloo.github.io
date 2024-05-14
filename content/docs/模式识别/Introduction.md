@@ -1,9 +1,10 @@
 ---
 date: '2024-02-26'
-title: 'Intro'
+lastmod: '2024-05-10'
+title: 'Introduction'
 weight: 1
 prev: '/docs/模式识别'
-url: '/docs/pr/1'
+url: '/docs/pr/0'
 ---
 
 笔记作者：BrickLoo
