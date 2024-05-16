@@ -8,18 +8,21 @@ toc: false
 ---
 ### 留言板
 
-路过的朋友们 2024 新年快乐，龙年大吉！ :laughing:
+这两天写支持向量机的笔记写得人都要崩溃了……最艰难的一集……
 
-2024 年的年度音乐创作已经更新（又水了一首 :zany_face:），欢迎点击[链接](https://i.y.qq.com/v8/playsong.html?songid=484852385)试听。受平台限制可能需要付费下载，并非本人原意，有需要音频者联系本人获取即可。  
-（先写曲子再定的名字和主题，好不容易想出来的取名，感觉完美契合，笑 :rofl:
-
-<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 04 月 22 日</div>
+<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 16 日</div>
 
 ---
 
 <div class="p-2"></div>
 
 ## 更新日志
+
+{{% details title="2024-05-16" closed="flase" %}}
+
+- “模式识别”篇新增一份文档；
+
+{{% /details %}}
 
 {{% details title="2024-05-14" closed="flase" %}}
 
@@ -35,7 +38,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-03-11" closed="flase" %}}
+{{% details title="2024-03-11" closed="true" %}}
 
 - “模式识别”篇的“Bayes”章节内容逻辑优化；
 - 友链更新，新增了连接，同时移除了暂时无法正常访问的链接；
