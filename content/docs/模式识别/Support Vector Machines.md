@@ -1,11 +1,10 @@
 ---
-date: '2024-05-14'
+date: '2024-05-16'
 lastmod: '2024-05-16'
 title: 'Support Vector Machines'
 weight: 7
 math: true
 url: '/docs/pr/6'
-draft: true
 ---
 
 笔记作者：BrickLoo  
