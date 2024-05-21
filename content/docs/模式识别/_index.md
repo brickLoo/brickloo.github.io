@@ -23,8 +23,5 @@ next: '/docs/模式识别/Intro'
   {{< card link="/docs/pr/4/" title="4. Neural Networks" >}}
   {{< card link="/docs/pr/5/" title="5. Practical Techniques" >}}
   {{< card link="/docs/pr/6/" title="6. Support Vector Machines" >}}
+  {{< card link="/docs/pr/7/" title="7. Decision Trees" >}}
 {{< /cards >}}
-
-{{< callout type="info" >}}
-本章节仍在更新中，敬请关注。
-{{< /callout >}}

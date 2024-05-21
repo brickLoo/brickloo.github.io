@@ -144,5 +144,5 @@ $$K(x_i,x_j)=\phi(x_i)^\intercal\phi(x_j)$$
 那么支持向量机的判别函数也就可以写成
 $$g(x)=\sum_{i=1}^n \alpha_iy_iK(x_i,x)+w_0$$
 
-不过，对于形如 $\phi(x_i)^\intercal\phi(x)$ 的核函数，它其实可以理解为通过判断向量的方向相似度来评估输入样本点与所有样本点的相似程度，并加权求和以判断输入样本所属类别；但，除了用方向相似度，我们还可以参考 [Neural Network](https://brickloo.github.io/docs/pr/4/) 章节中的 RBF 网络，使用距离相近度来判断输入样本点与其他样本点的近似程度，这也就是支持向量机处理非线性可分问题时最常见的一种核函数——高斯核函数。它的数学表达式为
+不过，对于形如 $\phi(x_i)^\intercal\phi(x)$ 的核函数，它其实可以理解为通过判断向量的方向相似度来评估输入样本点与所有样本点的相似程度，并加权求和以判断输入样本所属类别；但，除了用方向相似度，我们还可以参考 [Neural Network](https://brickloo.github.io/docs/pr/4/) 章节中的[ RBF 网络](https://brickloo.github.io/docs/pr/4/#radial-basis-function-rbf-network)，使用距离相近度来判断输入样本点与其他样本点的近似程度，这也就是支持向量机处理非线性可分问题时最常见的一种核函数——高斯核函数。它的数学表达式为
 $$K(x_i,x_j)=\exp(-\frac{\Vert x_i-x_j\Vert^2}{2\sigma^2})$$

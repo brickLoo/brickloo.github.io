@@ -8,15 +8,22 @@ toc: false
 ---
 ### 留言板
 
-这两天写支持向量机的笔记写得人都要崩溃了……最艰难的一集……
+今天，“模式识别”篇更新更新到了决策树部分的笔记。虽然这不是课程中的最后一个知识点，但是出于耗时、紧急性与重要性优先级的因素考虑，这个系列暂时停更。或许以后用到了相关的知识，或者相对有空的时候，会接着补上吧。
 
-<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 16 日</div>
+<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 21 日</div>
 
 ---
 
 <div class="p-2"></div>
 
 ## 更新日志
+
+{{% details title="2024-05-21" closed="flase" %}}
+
+- “模式识别”篇新增一份文档；
+
+{{% /details %}}
+
 
 {{% details title="2024-05-16" closed="flase" %}}
 
@@ -31,7 +38,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-05-10" closed="flase" %}}
+{{% details title="2024-05-10" closed="true" %}}
 
 - “模式识别”篇新增一份文档；
 - “模式识别”篇的“Linear Classification”章节修复变量错误；
