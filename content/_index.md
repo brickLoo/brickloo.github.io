@@ -21,6 +21,7 @@ toc: false
 {{% details title="2024-05-21" closed="flase" %}}
 
 - “模式识别”篇新增一份文档；
+- 新增“Fedora 使用技巧”篇，包含目录页和第一份文档；
 
 {{% /details %}}
 

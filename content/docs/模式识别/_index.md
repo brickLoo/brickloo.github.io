@@ -4,7 +4,7 @@ title: '模式识别'
 weight: 3
 prev: '/docs'
 url: '/docs/pr'
-next: '/docs/模式识别/Intro'
+next: '/docs/模式识别/Introduction'
 ---
 
 这里是华南理工大学计算机科学与工程学院吴斯教授开设的模式识别导论课程的课程笔记，制作过程中的参考资料包括但不限于课件和《模式分类》第二版。
