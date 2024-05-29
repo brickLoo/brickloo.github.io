@@ -1,6 +1,6 @@
 ---
 date: '2024-05-16'
-lastmod: '2024-05-16'
+lastmod: '2024-05-29'
 title: 'Support Vector Machines'
 weight: 7
 math: true
@@ -20,36 +20,36 @@ theory.
 从数形结合的角度考虑问题，线性二分类任务可以视为使用一个线性的决策边界划分空间中散落的样本点，而各种合适的参数则代表了这个决策边界的绘制方式。直观上来说，我们希望两个类别的样本被尽可能地分得更开，因此，两个类别到决策边界的最短距离需要尽可能大。此时，两个类别中间空出来不确定类别的地带，即两个类别到决策边界的距离之和，被称为 **margin**。也就是说，挑选最优的决策边界问题可以被转化成 margin 的最大化问题。
 
 根据前面前面 [Linear Classification](https://brickloo.github.io/docs/pr/3/) 中讨论过的线性模型 [几何特性](https://brickloo.github.io/docs/pr/3/#geometry-of-linear-discriminant-functions)，我们可以将样本点到决策边界的距离表示为
-$$d_x=\frac{g(x)}{\Vert\vec{w}\Vert}$$
+$$d_x=\frac{g(x)}{\lVert\vec{w}\rVert}$$
 此时式子的正负号表示样本点相对于决策边界的方向与决策边界法向量方向的异同关系。不妨将同向的样本点赋予类别标签值 $+1$，异向的样本点赋予类别标签值 $-1$，那么此时距离的数值大小就可以表示为
-$$r=y\frac{g(x)}{\Vert\vec{w}\Vert}$$
+$$r=y\frac{g(x)}{\lVert\vec{w}\rVert}$$
 
 对于最大化 margin 问题，我们只需考虑距离决策边界最近的样本点即可，这些样本点被称为**支持向量 support vectors**。虽然我们不知道它们是哪些样本，但是我们可以确定的是，假设我们已经求出了决策边界 $g(x)$ 的表达式，那么由于它们到达决策边界距离相等，一定处于 $g(x)=\pm c$ 两条直线上，那么，此时 margin 的表达式就可以写成
-$$2y\frac{g(x)}{\Vert\vec{w}\Vert}=\frac{2c}{\Vert\vec{w}\Vert}$$
+$$2y\frac{g(x)}{\lVert\vec{w}\rVert}=\frac{2c}{\lVert\vec{w}\rVert}$$
 
-所以，margin 的最大化问题，实际上是分母 $\Vert\vec{w}\Vert$ 的最小化问题。考虑到绝对值的计算和求导等方面问题，我们可以略作调整，把优化目标最终描述为：
-$$\text{minimize } \frac{1}{2}\Vert w \Vert^2, \newline \text{such that } y_i(w^\intercal x_i+w_0) \ge c$$
+所以，margin 的最大化问题，实际上是分母 $\lVert\vec{w}\rVert$ 的最小化问题。考虑到绝对值的计算和求导等方面问题，我们可以略作调整，把优化目标最终描述为：
+$$\text{minimize } \frac{1}{2}\lVert w \rVert^2, \newline \text{such that } y_i(w^\intercal x_i+w_0) \ge c$$
 
 要注意别忘记这里的条件，因为对于线性可分问题的边界优化首先需要保证分类正确。
 
 这里保留数值大小不确定的常量 $c$ 并不是这么好，因为我们可以先将式子两边同时除以这个正值 $c$，变为 $y_i(w^\intercal x_i/c+w_0/c) \ge 1$，然后再忽略掉这个常数 $c$，即
-$$\text{minimize } \frac{1}{2}\Vert w \Vert^2, \newline \text{such that } y_i(w^\intercal x_i+w_0) \ge 1$$
+$$\text{minimize } \frac{1}{2}\lVert w \rVert^2, \newline \text{such that } y_i(w^\intercal x_i+w_0) \ge 1$$
 因为反正 $w$ 和 $w_0$ 都是要训练的变量，直接将参数训练到与这个对应的值即可，因此我们就不需要再明确地把常数 $c$ 给写出来了。这样，不但式子中的未知量就直接减少了一个，而且对于支持向量 $g(x)$ 计算出来的值直接就是类别标签值，方便后续计算。
 
 ## The Karush-Kuhn-Tucker Conditions
 
 约束和优化目标通常是互相抗衡的，而约束之间也可能会存在抗衡，否则约束并无意义。要解决带约束的优化问题，我们可以从所求变量参与抗衡关系入手，因为当它们互相制衡时，问题能够取到最优值。当我们找到了它们互相制衡的平衡点时，我们就可以利用此时的相等关系求出问题的解。这就是“KKT 条件”的思想。
 
-在这个问题中，变量 $\Vert\vec{w}\Vert$ 的抗衡表现在损失和约束之间，损失中它越小越好，但是小到一定程度的时候有可能导致不满足约束 $y_i(w^\intercal x_i+w_0) \ge 1$；而变量 $w_0$ 的抗衡存在于多个约束之间，$w_0$ 的移动可能在导致部分约束更容易满足的同时，部分约束更难满足。
+在这个问题中，变量 $\lVert\vec{w}\rVert$ 的抗衡表现在损失和约束之间，损失中它越小越好，但是小到一定程度的时候有可能导致不满足约束 $y_i(w^\intercal x_i+w_0) \ge 1$；而变量 $w_0$ 的抗衡存在于多个约束之间，$w_0$ 的移动可能在导致部分约束更容易满足的同时，部分约束更难满足。
 
 如果将不满足的约束表现为损失，将抗衡关系表现为损失之间的权衡，我们就可以将目标和约束加权地合并到同一个损失表达式中，并通过总损失对所求变量满足梯度值为 $0$ 的等式表达抗衡关系的平衡点。即，对于总共 $n$ 个样本，我们可以将总损失写为
-$$L(w,w_0,\alpha)=\frac{1}{2}\Vert w \Vert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(w^\intercal x_i+w_0)\big)$$
+$$L(w,w_0,\alpha)=\frac{1}{2}\lVert w \rVert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(w^\intercal x_i+w_0)\big)$$
 而变量 $w$ 和 $w_0$ 的取值平衡点 $w^* $ 和 $w_0^* $ 符合
 $$\frac{\partial L}{\partial w}=w-\sum_{i=1}^n\alpha_iy_ix_i=0$$
 $$\frac{\partial L}{\partial w_0}=\sum_{i=1}^n\alpha_iy_i=0$$
 
 对于 $w_0$，当损失函数取到最小值，也就是抗衡关系达到平衡点时，我们可以利用第二条等式进一步化简损失函数的公式，得到
-$$L(w,w_0^*,\alpha)=\frac{1}{2}\Vert w \Vert^2+\sum_{i=1}^n\alpha_i(1-y_iw^\intercal x_i)$$
+$$L(w,w_0^*,\alpha)=\frac{1}{2}\lVert w \rVert^2+\sum_{i=1}^n\alpha_i(1-y_iw^\intercal x_i)$$
 
 其中，权重 $\alpha$ 虽然还不好确定，但是我们可以知道它存在约束
 $$\alpha_i \ge 0 \text{ for all } i$$
@@ -70,7 +70,7 @@ $$\text{maximize }\min_w L(w,w_0^*,\alpha)$$
 不过对于表达式 $w=\sum_{i=1}^n\alpha_iy_ix_i$，我们可以先将其下标 $i$ 替换成下标 $j$ 以避免歧义，然后再代入损失函数，得到
 
 $$\begin{align*}
-\min_w L(\alpha)&=\frac{1}{2}\Vert\sum_{j=1}^ny_jx_j\alpha_j\Vert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(\sum_{j=1}^n\alpha_jy_jx_j)^\intercal x_i\big) \newline
+\min_w L(\alpha)&=\frac{1}{2}\lVert\sum_{j=1}^ny_jx_j\alpha_j\rVert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(\sum_{j=1}^n\alpha_jy_jx_j)^\intercal x_i\big) \newline
 &=\sum_{i=1}^na_i-\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n y_i y_j x_i^\intercal x_j \alpha_i \alpha_j
 \end{align*}$$
 
@@ -94,12 +94,12 @@ $$1-y_i\big((\sum_{j=1}^n\alpha_jy_jx_j)^\intercal x_i+w_0\big) \le 0$$
 ## Soft Margin Classification
 
 对于存在噪声的数据，即使是线性可分任务，支持向量机也可能会因为噪声而变得束手无策。因此，我们可以尝试为支持向量机赋予容错能力：  
-1. 将容纳的错误引入优化目标中，既能从约束变成容错，也能促使模型在训练过程中尽可能减少错误。我们用分类错误的样本点 $x_i$ 距离决策边界的距离 $\epsilon_i$，或者按照通常的叫法称为**松弛变量 slack variables**，作为该样本的容错距离，则此时要优化的目标可以表示为 $$\text{minimize } \frac{1}{2}\Vert w \Vert^2+\lambda\sum_{i=1}^n\epsilon_i$$ 其中，对于分类正确的样本，$\epsilon_i$ 取 $0$ 即可；式中还引入了变量 $\lambda$，使得支持向量机对错误样本的敏感程度可控；
+1. 将容纳的错误引入优化目标中，既能从约束变成容错，也能促使模型在训练过程中尽可能减少错误。我们用分类错误的样本点 $x_i$ 距离决策边界的距离 $\epsilon_i$，或者按照通常的叫法称为**松弛变量 slack variables**，作为该样本的容错距离，则此时要优化的目标可以表示为 $$\text{minimize } \frac{1}{2}\lVert w \rVert^2+\lambda\sum_{i=1}^n\epsilon_i$$ 其中，对于分类正确的样本，$\epsilon_i$ 取 $0$ 即可；式中还引入了变量 $\lambda$，使得支持向量机对错误样本的敏感程度可控；
 2. 同时，我们对分类正确性的约束也需要加入松弛变量，使其相应地更新为 $$y_i(w^\intercal x_i+w_0) \ge 1-\epsilon_i$$
 3. 另外，根据 $\epsilon$ 的含义，我们还能得出约束 $$\epsilon_i \ge 0 \text{ for all } i$$
 
 接下来，我们还是借助 KKT 条件，列出
-$$L(w,w_0,\epsilon,\alpha,\beta)=\frac{1}{2}\Vert w \Vert^2+\lambda\sum\epsilon_i+\sum_{i=1}^n\alpha_i\big(1-\epsilon_i-y_i(w^\intercal x_i+w_0)\big)+\sum_{i=1}^n\beta_i(-\epsilon_i)$$
+$$L(w,w_0,\epsilon,\alpha,\beta)=\frac{1}{2}\lVert w \rVert^2+\lambda\sum\epsilon_i+\sum_{i=1}^n\alpha_i\big(1-\epsilon_i-y_i(w^\intercal x_i+w_0)\big)+\sum_{i=1}^n\beta_i(-\epsilon_i)$$
 
 其中变量 $\alpha$ 和 $\beta$ 均具有大于 $0$ 的约束。
 
@@ -108,8 +108,8 @@ $$\frac{\partial L}{\partial \epsilon_i}=\lambda-\alpha_i-\beta_i=0$$
 
 不妨借助这个等式将原式子中的 $\beta$ 消掉，减少一个变量，得到
 $$\begin{align*}
-L(w,w_0,\epsilon,\alpha)&=\frac{1}{2}\Vert w \Vert^2+\lambda\sum\epsilon_i+\sum_{i=1}^n\alpha_i\big(1-\epsilon_i-y_i(w^\intercal x_i+w_0)\big)+\sum_{i=1}^n(\lambda-\alpha_i)(-\epsilon_i) \newline
-&=\frac{1}{2}\Vert w \Vert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(w^\intercal x_i+w_0)\big)
+L(w,w_0,\epsilon,\alpha)&=\frac{1}{2}\lVert w \rVert^2+\lambda\sum\epsilon_i+\sum_{i=1}^n\alpha_i\big(1-\epsilon_i-y_i(w^\intercal x_i+w_0)\big)+\sum_{i=1}^n(\lambda-\alpha_i)(-\epsilon_i) \newline
+&=\frac{1}{2}\lVert w \rVert^2+\sum_{i=1}^n\alpha_i\big(1-y_i(w^\intercal x_i+w_0)\big)
 \end{align*}$$
 
 可以发现，当式子中的变量变量 $\epsilon$ 取到最优值的时候，损失函数与原本没引入松弛变量时是一样的，唯一的不同之处在于多了一个 $\beta$ 变量大于 $0$ 的约束。根据等式我们可以将其合并进 $\alpha$ 的约束中得到
@@ -145,4 +145,4 @@ $$K(x_i,x_j)=\phi(x_i)^\intercal\phi(x_j)$$
 $$g(x)=\sum_{i=1}^n \alpha_iy_iK(x_i,x)+w_0$$
 
 不过，对于形如 $\phi(x_i)^\intercal\phi(x)$ 的核函数，它其实可以理解为通过判断向量的方向相似度来评估输入样本点与所有样本点的相似程度，并加权求和以判断输入样本所属类别；但，除了用方向相似度，我们还可以参考 [Neural Network](https://brickloo.github.io/docs/pr/4/) 章节中的[ RBF 网络](https://brickloo.github.io/docs/pr/4/#radial-basis-function-rbf-network)，使用距离相近度来判断输入样本点与其他样本点的近似程度，这也就是支持向量机处理非线性可分问题时最常见的一种核函数——高斯核函数。它的数学表达式为
-$$K(x_i,x_j)=\exp(-\frac{\Vert x_i-x_j\Vert^2}{2\sigma^2})$$
+$$K(x_i,x_j)=\exp(-\frac{\lVert x_i-x_j\rVert^2}{2\sigma^2})$$

@@ -4,7 +4,7 @@ title: '论文阅读笔记'
 weight: 4
 prev: '/docs'
 url: '/docs/papers-notes'
-next: '/docs/论文阅读笔记/AutoAttack'
+next: '/docs/论文阅读笔记/对抗样本生成技术'
 ---
 
 这里是一些砖的论文阅读笔记。  
@@ -13,7 +13,8 @@ next: '/docs/论文阅读笔记/AutoAttack'
 模型攻防系列：
 
 {{< cards >}}
-  {{< card link="/docs/papers-note/AutoAttack/" title="AutoAttack" >}}
+  {{< card link="/docs/papers-notes/adv-attacks/" title="对抗样本生成技术" >}}
+  {{< card link="/docs/papers-notes/AutoAttack/" title="AutoAttack" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

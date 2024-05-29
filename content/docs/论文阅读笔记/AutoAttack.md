@@ -1,11 +1,10 @@
 ---
 date: '2024-01-16'
 title: 'AutoAttack'
-weight: 1
+weight: 2
 math: true
 prev: '/docs/论文阅读笔记'
 url: '/docs/papers-notes/AutoAttack'
-next: '/docs/论文阅读笔记/DiffPure'
 ---
 
 > 笔记作者：BrickLoo

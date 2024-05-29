@@ -1,6 +1,6 @@
 ---
 date: '2024-05-10'
-lastmod: '2024-05-14'
+lastmod: '2024-05-29'
 title: 'Neural Networks'
 weight: 5
 math: true
@@ -107,7 +107,7 @@ $$\frac{\partial L}{\partial w_{kj}}=\frac{\partial L}{\partial output_k}\frac{\
 其中，$net_k = \sum^n_{t=1}{w_{kt}y_t}$，$output_k=f(net_k)$，分别表示神经网络模型单元中的线性组合和非线性处理部分，因此，
 $$\begin{align*}
 \frac{\partial L}{\partial output_k}&=-(target_k-output_k) \newline
-\frac{\partial output_k}{\partial net_k}&=f\prime(net_k) \newline
+\frac{\partial output_k}{\partial net_k}&=f^\prime(net_k) \newline
 \frac{\partial net_k}{\partial w_{kj}}&=output_j
 \end{align*}$$
 
@@ -116,7 +116,7 @@ $$\frac{\partial L}{\partial w_{kj}}=\frac{\partial L}{\partial output_k}\frac{\
 每一项的取值分别是
 $$\begin{align*}
 \frac{\partial L}{\partial output_j}&=\sum\frac{\partial L}{\partial net_k}\frac{\partial net_k}{\partial output_j}=\sum\frac{\partial L}{\partial net_k}w_{kj} \newline
-\frac{\partial output_j}{\partial net_j}&=f\prime(net_j) \newline
+\frac{\partial output_j}{\partial net_j}&=f^\prime(net_j) \newline
 \frac{\partial net_j}{\partial w_{ji}}&=output_i
 \end{align*}$$
 值得注意的是，在求解 $\frac{\partial L}{\partial output_j}$ 这一项时，我们应该记得进行求和操作，因为第 $j$ 层神经元输出的值会送到第 $k$ 层中多个不同的神经元进行计算，而对于第 $k$ 层中不同神经元的输出 $output_k$，我们也有不同的期望值 $target_k$（可以理解为多分类问题中 one-versus-the-rest 的设计）。在衡量模型整体的误差时，我们通常需要叠加地考虑同一层中不同神经元的误差，因此我们在更新参数时也需要充分地考虑对于所有路径的影响。

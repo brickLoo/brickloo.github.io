@@ -8,15 +8,22 @@ toc: false
 ---
 ### 留言板
 
-今天，“模式识别”篇更新更新到了决策树部分的笔记。虽然这不是课程中的最后一个知识点，但是出于耗时、紧急性与重要性优先级的因素考虑，这个系列暂时停更。或许以后用到了相关的知识，或者相对有空的时候，会接着补上吧。
+整理出了一份对抗样本生成技术的简单合集，包含一些简单常用的攻击技术，欢迎阅读～
 
-<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 21 日</div>
+<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 29 日</div>
 
 ---
 
 <div class="p-2"></div>
 
 ## 更新日志
+
+{{% details title="2024-05-29" closed="flase" %}}
+
+- “论文阅读笔记”篇新增一份文档；
+- 修复了“论文阅读笔记”篇目录页的错误链接；
+
+{{% /details %}}
 
 {{% details title="2024-05-21" closed="flase" %}}
 
@@ -32,7 +39,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-05-14" closed="flase" %}}
+{{% details title="2024-05-14" closed="true" %}}
 
 - “模式识别”篇新增一份文档；
 - “模式识别”篇调整了链接中的序号；
