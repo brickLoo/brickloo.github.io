@@ -120,10 +120,10 @@ $$\nabla_x CE(x,y)=-\nabla_x z_y+\frac{\sum_{i=1}^K e^{z_i} \nabla_x z_i}{\sum_{
 
 ### 改进
 
-作者基于 C&W 中选取的损失函数 $CW(x,y)=-z_y+\mathop{max}\limits_{i \neq y}\{z_i\}$ 进行改进（因为这个损失函数求导后依然受到 logits 值本身的数值大小影响，不具有缩放不变性）
+作者基于 C&W 中选取的损失函数 $CW(x,y)=-z_y+\mathop{max}\limits_{i \neq y}\lbrace z_i\rbrace$ 进行改进（因为这个损失函数求导后依然受到 logits 值本身的数值大小影响，不具有缩放不变性）
 
 作者提出的替代损失函数名为 DLR
-$$DLR(x,y)=-\frac{z_y-\mathop{max}\limits_{i \neq y}\{z_i\}}{z_{\pi_1}-z_{\pi_3}}$$
+$$DLR(x,y)=-\frac{z_y-\mathop{max}\limits_{i \neq y}\lbrace z_i\rbrace}{z_{\pi_1}-z_{\pi_3}}$$
 式中，$z$ 是 logits 值，$\pi$ 及其下标表示降序排序中的位次信息。由于最大得分的错误类别只可能处于第一或第二的位次，作者通过第一位次和第三位次的分差作为分母，使得最终的损失值落在 $(-1,1)$ 之间。如果对 logits 值进行缩放，DLR 会产生抵消，维持缩放不变性，保证其自由度与分类器的决策相等。
 
 同时，作者也为针对性攻击场景设计了替代损失函数 Targeted-DLR

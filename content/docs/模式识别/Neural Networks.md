@@ -77,7 +77,7 @@ $$L(w)=-g(x)y$$
 4. Repeat
 5. &emsp;$M=\emptyset$
 6. &emsp;For $i = 1$ to $N$
-7. &emsp;&emsp;If $g(x_i) y_i \leq 0$, then $M = M \cup \{x_i\}$
+7. &emsp;&emsp;If $g(x_i) y_i \leq 0$, then $M = M \cup \lbrace x_i \rbrace$
 8. &emsp;End
 9. &emsp;$w_{t + 1} = w_t + \eta \sum_{x\in M}{g(x)y}$
 10. &emsp;$t=t+1$
