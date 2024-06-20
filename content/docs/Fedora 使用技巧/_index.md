@@ -17,6 +17,7 @@ next: '/docs/Fedora 使用技巧/dnf'
 
 {{< cards >}}
   {{< card link="/docs/fedora/dnf/" title="软件包管理" >}}
+  {{< card link="/docs/fedora/shortcuts/" title="快捷键技巧" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

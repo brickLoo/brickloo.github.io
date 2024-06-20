@@ -4,7 +4,7 @@ title: 'VQVAE'
 weight: 2
 math: true
 prev: '/docs/论文阅读笔记/VQVAE'
-url: '/docs/papers-notes/DiffPure'
+url: '/docs/papers/DiffPure'
 draft: true
 ---
 

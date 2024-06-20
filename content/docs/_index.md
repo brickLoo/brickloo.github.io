@@ -15,6 +15,6 @@ next: '/docs/个人网站搭建'
   {{< card link="/docs/build-your-site/" title="个人网站搭建" >}}
   {{< card link="/docs/git/" title="Git 操作指南" >}}
   {{< card link="/docs/pr/" title="模式识别" >}}
-  {{< card link="/docs/papers-notes/" title="论文阅读笔记" >}}
+  {{< card link="/docs/papers/" title="论文阅读笔记" >}}
   {{< card link="/docs/fedora/" title="Fedora 使用技巧" >}}
 {{< /cards >}}

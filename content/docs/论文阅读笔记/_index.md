@@ -3,7 +3,7 @@ date: '2024-01-16'
 title: '论文阅读笔记'
 weight: 4
 prev: '/docs'
-url: '/docs/papers-notes'
+url: '/docs/papers'
 next: '/docs/论文阅读笔记/对抗样本生成技术'
 ---
 
@@ -13,8 +13,8 @@ next: '/docs/论文阅读笔记/对抗样本生成技术'
 模型攻防系列：
 
 {{< cards >}}
-  {{< card link="/docs/papers-notes/adv-attacks/" title="对抗样本生成技术" >}}
-  {{< card link="/docs/papers-notes/AutoAttack/" title="AutoAttack" >}}
+  {{< card link="/docs/papers/attacks/" title="对抗样本生成技术" >}}
+  {{< card link="/docs/papers/AutoAttack/" title="AutoAttack" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

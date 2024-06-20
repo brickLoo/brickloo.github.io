@@ -4,7 +4,7 @@ title: 'AutoAttack'
 weight: 2
 math: true
 prev: '/docs/论文阅读笔记'
-url: '/docs/papers-notes/AutoAttack'
+url: '/docs/papers/AutoAttack'
 ---
 
 > 笔记作者：BrickLoo

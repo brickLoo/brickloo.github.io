@@ -4,7 +4,7 @@ title: 'DiffPure'
 weight: 2
 math: true
 prev: '/docs/论文阅读笔记/AutoAttack'
-url: '/docs/papers-notes/DiffPure'
+url: '/docs/papers/DiffPure'
 draft: true
 ---
 

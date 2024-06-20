@@ -8,15 +8,22 @@ toc: false
 ---
 ### 留言板
 
-整理出了一份对抗样本生成技术的简单合集，包含一些简单常用的攻击技术，欢迎阅读～
+大三下的课程任务总算是结束了，新阶段的学习开始！准备入坑多模态～
 
-<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 05 月 29 日</div>
+<div class="p-4 text-xs ltr:text-right rtl:text-left">2024 年 06 月 19 日</div>
 
 ---
 
 <div class="p-2"></div>
 
 ## 更新日志
+
+{{% details title="2024-06-20" closed="flase" %}}
+
+- 简化了“论文阅读笔记”篇的 url；
+- “Fedora 使用技巧”篇新增文档“快捷键技巧”；
+
+{{% /details %}}
 
 {{% details title="2024-05-29" closed="flase" %}}
 
@@ -34,7 +41,7 @@ toc: false
 {{% /details %}}
 
 
-{{% details title="2024-05-16" closed="flase" %}}
+{{% details title="2024-05-16" closed="true" %}}
 
 - “模式识别”篇新增一份文档；
 
