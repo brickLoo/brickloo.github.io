@@ -25,6 +25,12 @@ toc: false
 
 ## 更新日志
 
+{{% details title="2025-01-16" closed="flase" %}}
+
+- “Fedora 使用技巧”篇新增文档“代码运行”；
+
+{{% /details %}}
+
 {{% details title="2024-06-20" closed="flase" %}}
 
 - 简化了“论文阅读笔记”篇的 url；
@@ -40,7 +46,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-05-21" closed="flase" %}}
+{{% details title="2024-05-21" closed="true" %}}
 
 - “模式识别”篇新增一份文档；
 - 新增“Fedora 使用技巧”篇，包含目录页和第一份文档；
