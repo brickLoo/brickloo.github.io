@@ -25,6 +25,12 @@ toc: false
 
 ## 更新日志
 
+{{% details title="2025-02-18" closed="flase" %}}
+
+- 更正了“Fedora 使用技巧”篇“代码运行”中的错误；
+
+{{% /details %}}
+
 {{% details title="2025-01-16" closed="flase" %}}
 
 - “Fedora 使用技巧”篇新增文档“代码运行”；
@@ -38,7 +44,7 @@ toc: false
 
 {{% /details %}}
 
-{{% details title="2024-05-29" closed="flase" %}}
+{{% details title="2024-05-29" closed="true" %}}
 
 - “论文阅读笔记”篇新增一份文档；
 - 修复了“论文阅读笔记”篇目录页的错误链接；
